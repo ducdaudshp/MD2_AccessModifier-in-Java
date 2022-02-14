@@ -21,6 +21,7 @@ public class Main {
 //        long n;
         String n= input.nextLine();
         for (int i=0;i< listBook.length;i++){
+            String result = "Không tìm thấy đầu sách cần tìm!!!";
             if (listBook[i].getName().equals(n)){
                 System.out.println("Sách cần tìm của bạn đây!!!");
                 System.out.print("Tên sách: ");
@@ -33,6 +34,10 @@ public class Main {
                 System.out.println(listBook[i].getQuantity());
                 System.out.print("Cân nặng: ");
                 System.out.println(listBook[i].getWeight());
+                break;
+            }
+            if (i==listBook.length-1){
+                System.out.println(result);
             }
         }
     }
